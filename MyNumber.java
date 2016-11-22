@@ -45,11 +45,7 @@ public abstract class MyNumber{
 	return getValue();
     }
     public boolean equals(Object rhs){
-	       return false; 
-    }
-    
-    public boolean equals(MyNumber rhs){
-    	return intValue() == ((MyNumber)rhs).intValue();   
+	return (this == rhs) || ((rhs!=null)&&((rhs instanceof MyNumber)&&(intValue()==((MyNumber)rhs).intValue())));
     }
     
     // Abstract methods
