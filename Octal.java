@@ -26,7 +26,7 @@ public class Octal extends MyNumber{
     
     public boolean equals(MyNumber rhs){
     	if (!(rhs instanceof Octal)) return false;
-    	return intValue() == ((MyNumber)rhs).intValue();
+    	return _octal.equals(((Octal)rhs)._octal);
     }
 
 }

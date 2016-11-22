@@ -26,7 +26,7 @@ public class Binary extends MyNumber{
     
     public boolean equals(MyNumber rhs){
     	if (!(rhs instanceof Binary)) return false;
-    	return intValue() == ((MyNumber)rhs).intValue();
+    	return _binary.equals(((Binary)rhs)._binary);
     }
 
 }

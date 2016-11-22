@@ -27,7 +27,7 @@ public class Hexadecimal extends MyNumber{
     
     public boolean equals(MyNumber rhs){
     	if (!(rhs instanceof Hexadecimal)) return false;
-    	return intValue() == ((MyNumber)rhs).intValue();
+    	return _hexadecimal.equals(((Hexadecimal)rhs)._hexadecimal);
     }
 
 }
