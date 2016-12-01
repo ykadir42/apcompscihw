@@ -14,10 +14,11 @@ public class Bear extends Animal{
     public void move()  {
     	Animal[] river = _eco.getRiver();
     	int movement = (int)(Math.random()*3-2);
-    	if(!(_pos+movement>river.length||_pos+movement<0)&&river[_pos+movement]==null){
+    	int newPos = _pos+movement;
+    	if(!(newPos>river.length||newPos<0)&&river[newPos]==null){
     		river[_pos]=null;
-    		_pos=_pos+movement;
-    		river[_pos]=this;
+    		_pos=newPos;
+    		river[newPos]=this;
     		
     	}
     }
